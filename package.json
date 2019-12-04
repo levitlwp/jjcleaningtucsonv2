@@ -1,0 +1,14 @@
+{
+  "name": "jjcleaningtucsonv2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass assets/sass/main.scss assets/css/style.css -w"
+  },
+  "author": "Bowen Yang",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.13.0"
+  }
+}

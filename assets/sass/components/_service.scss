@@ -1,0 +1,20 @@
+.service {
+  &__details {
+    display: flex;
+  }
+
+  &__detail-box {
+    display: flex;
+  }
+
+  &__image {
+    width: 50%;
+  }
+
+  &__detail-content {
+  }
+
+  &__detail-heading {
+    font-size: 1.8rem;
+  }
+}

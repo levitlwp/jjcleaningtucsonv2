@@ -1,0 +1,28 @@
+.navigation {
+  background-color: #fff;
+
+  & .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__box {
+  }
+
+  &__menu {
+  }
+
+  &__item {
+    list-style: none;
+    padding: 3rem 1.5rem;
+    display: inline-block;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-dark;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+  }
+}
