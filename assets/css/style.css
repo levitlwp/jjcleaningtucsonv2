@@ -46,10 +46,6 @@ body {
   font-size: 2.2rem;
   text-transform: capitalize; }
 
-.heading-4 {
-  font-size: 1.8rem;
-  text-transform: capitalize; }
-
 .paragraph {
   font-size: 1.8rem;
   color: #9e9e9e; }
@@ -194,16 +190,25 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between; }
+  .introduction__detail-heading {
+    font-size: 1.8rem;
+    text-transform: capitalize; }
+  .introduction__heading {
+    font-size: 2.2rem;
+    text-transform: capitalize; }
   .introduction__icon {
     font-size: 1.6rem; }
   .introduction__detail-bottom {
     color: #9e9e9e;
-    font-size: 1.6rem; }
+    font-size: 1.6rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid #9e9e9e; }
     .introduction__detail-bottom--toggle {
       display: none; }
 
 .icons {
-  padding-top: 50rem;
+  padding-top: 55rem;
+  padding-bottom: 10rem;
   margin-top: -42rem;
   background-color: #f7f7f7; }
   .icons__row {
