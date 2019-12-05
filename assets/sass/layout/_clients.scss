@@ -1,0 +1,90 @@
+.clients {
+  padding: 5rem 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('/assets/img/hero3.jpg');
+  height: 80rem;
+  background-position: center;
+  background-size: cover;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__heading {
+    font-size: 3.2rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  &__sub-heading {
+    font-size: 2.2rem;
+    color: #fff;
+    font-weight: 300;
+  }
+
+  &__boxes {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__box {
+    flex: 0 0 31%;
+    background-color: #fff;
+    overflow: hidden;
+    border-radius: 1px;
+    padding: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40rem;
+  }
+
+  &__paragraph {
+    font-size: 1.6rem;
+    color: $color-grey;
+    text-align: center;
+    position: relative;
+
+    &::before {
+      content: '\201C';
+      display: block;
+      font-size: 10rem;
+      position: absolute;
+      top: -8rem;
+      left: -3rem;
+      opacity: 0.2;
+    }
+  }
+
+  &__stars {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__star {
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    color: $color-green;
+  }
+
+  &__info {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__name {
+    font-size: 1.8rem;
+  }
+
+  &__area {
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    opacity: 0.4;
+  }
+}

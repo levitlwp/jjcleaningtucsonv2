@@ -44,7 +44,7 @@ introItemsArr.forEach((el, index) => {
       });
 
       // Heading on the right
-      introHeading.textContent = 'Superior result';
+      introHeading.textContent = 'Need home cleaning?';
     }
 
     // BUSINESS

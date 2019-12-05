@@ -1,0 +1,112 @@
+.footer {
+  background-color: $color-bg-dark-2;
+
+  &__top {
+    padding: 3rem 0;
+    display: flex;
+    background-color: $color-bg-dark-1;
+    align-items: center;
+  }
+
+  &__top-box {
+    margin-left: 5rem;
+    display: flex;
+    align-items: center;
+    flex: 0 0 30%;
+  }
+
+  &__icon {
+    color: $color-grey;
+    font-size: 4.5rem;
+    margin-right: 2rem;
+  }
+
+  &__top-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__top-content {
+    color: $color-grey;
+    font-size: 1.2rem;
+    font-weight: 700;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 2px;
+      height: 3rem;
+      color: $color-grey;
+      top: 50%;
+      right: 0;
+    }
+  }
+
+  &__mid {
+    display: flex;
+  }
+
+  &__logo {
+    color: #fff;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+  }
+
+  &__mid-box {
+    flex: 0 0 30%;
+    margin-right: 8rem;
+  }
+
+  &__heading {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+
+    &--dark {
+      color: $color-dark;
+    }
+  }
+
+  &__menu {
+  }
+
+  &__item {
+    display: block;
+    padding: 0.5rem 0;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-grey;
+    font-size: 1.3rem;
+  }
+
+  &__bottom {
+    background-color: $color-bg-dark-1;
+    padding: 3rem 0;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &--left {
+      color: $color-grey;
+      font-size: 1.4rem;
+    }
+
+    &--right {
+    }
+
+    &-link {
+      text-decoration: none;
+      color: $color-grey;
+      font-size: 1.4rem;
+      margin-left: 3rem;
+    }
+  }
+}
