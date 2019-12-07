@@ -1,35 +1,67 @@
-const introItems = document.querySelectorAll('.introduction__item');
-const introItemsArr = Array.from(introItems);
+const headerNavItems = document.querySelectorAll('.headernav__item');
+const headerNavItemsArr = Array.from(headerNavItems);
 
-const introLinks = document.querySelectorAll('.introduction__link');
-const introLinksArr = Array.from(introLinks);
+const headerNavLinks = document.querySelectorAll('.headernav__link');
+const headerNavLinksArr = Array.from(headerNavLinks);
 
 const introDetailHeading = document.querySelectorAll(
   '.introduction__detail-heading'
 );
+
 const introDetailHeadingArr = Array.from(introDetailHeading);
+
+const introIcons = document.querySelectorAll('.introduction__icon');
+const introIcsonsArr = Array.from(introIcons);
+
+const introDetailBottom = document.querySelectorAll(
+  '.introduction__detail-bottom'
+);
+const introDetailBottomArr = Array.from(introDetailBottom);
 
 const introHeading = document.querySelector('.introduction__heading');
 
+// Clear introduction active state
 const clearIntroActive = () => {
-  introItemsArr.forEach(el => {
-    el.classList.remove('introduction__item--active');
+  headerNavItems.forEach(el => {
+    el.classList.remove('headernav__item--active');
   });
-  introLinksArr.forEach(el => {
-    el.classList.remove('introduction__link--active');
+  headerNavLinksArr.forEach(el => {
+    el.classList.remove('headernav__link--active');
   });
 };
 
-introItemsArr.forEach((el, index) => {
+// Collapse all contents
+const collapseDetailContent = () => {
+  introDetailBottomArr.forEach(el => {
+    el.classList.remove('introduction__detail-bottom--toggle');
+    el.classList.add('introduction__detail-bottom--toggle');
+  });
+};
+
+// Default all icons
+const defaultIcons = () => {
+  introIcsonsArr.forEach(el => {
+    el.classList.remove('fa-minus');
+    el.classList.add('fa-plus');
+  });
+};
+
+headerNavItems.forEach((el, index) => {
   el.addEventListener('click', e => {
     e.preventDefault();
+
     // 1. Clear all active state
     clearIntroActive();
-    // 2. Change current event to active
-    introLinksArr[index].classList.add('introduction__link--active');
-    el.classList.toggle('introduction__item--active');
-    // 3. Change the content
 
+    // 2. Collapse all content & change all icons to default
+    collapseDetailContent();
+    defaultIcons();
+
+    // 3. Change current event to active
+    headerNavLinksArr[index].classList.add('headernav__link--active');
+    el.classList.toggle('headernav__item--active');
+
+    // 4. Change the content
     // RESIDENTIAL
     if (index === 0) {
       // Details
@@ -97,6 +129,16 @@ introItemsArr.forEach((el, index) => {
   });
 });
 
+introIcsonsArr.forEach((el, index) => {
+  el.addEventListener('click', e => {
+    el.classList.toggle('fa-plus');
+    el.classList.toggle('fa-minus');
+    introDetailBottomArr[index].classList.toggle(
+      'introduction__detail-bottom--toggle'
+    );
+  });
+});
+
 const headerIcons = document.querySelectorAll('.header__icon');
 const headerIconsArr = Array.from(headerIcons);
 const header = document.querySelector('.header');
@@ -107,4 +149,27 @@ headerIconsArr.forEach((el, index) => {
       header.style.backgroundImage = "url('/assets/img/hero2.jpg')";
     }
   });
+});
+
+$('.counter').each(function() {
+  const $this = $(this),
+    countTo = $this.attr('data-count');
+
+  $({ countNum: $this.text() }).animate(
+    {
+      countNum: countTo
+    },
+
+    {
+      duration: 8000,
+      easing: 'linear',
+      step: function() {
+        $this.text(Math.floor(this.countNum));
+      },
+      complete: function() {
+        $this.text(this.countNum);
+        //alert('finished');
+      }
+    }
+  );
 });

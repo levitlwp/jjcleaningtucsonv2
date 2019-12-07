@@ -1,13 +1,15 @@
 .introduction {
-  background-color: #fff;
-  position: relative;
-  margin-top: -10rem;
+  background-color: $color-light-1;
   z-index: 2;
-  transition: all 0.2s;
 
-  &__menu {
+  .container {
+    padding: 5rem 4rem;
+    background-color: #fff;
+  }
+
+  &__details {
     display: flex;
-    border-bottom: 1px solid $color-light-1;
+    justify-content: space-between;
   }
 
   &__item {
@@ -40,12 +42,6 @@
     }
   }
 
-  &__details .container {
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-  }
-
   &__details--left {
     flex: 0 0 60%;
   }
@@ -53,7 +49,10 @@
   &__details--right {
     flex: 0 0 35%;
   }
-
+  &__detail {
+    border-bottom: 1px solid $color-grey;
+    margin-bottom: 4rem;
+  }
   &__detail-top {
     display: flex;
     align-items: center;
@@ -72,13 +71,13 @@
 
   &__icon {
     font-size: 1.6rem;
+    cursor: pointer;
   }
 
   &__detail-bottom {
     color: $color-grey;
     font-size: 1.6rem;
     padding-bottom: 3rem;
-    border-bottom: 1px solid $color-grey;
 
     &--toggle {
       display: none;

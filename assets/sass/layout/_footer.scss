@@ -28,10 +28,17 @@
   }
 
   &__top-content {
+    text-decoration: none;
+    display: block;
     color: $color-grey;
     font-size: 1.2rem;
-    font-weight: 700;
     position: relative;
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      color: $color-green;
+    }
 
     &::after {
       position: absolute;
@@ -79,10 +86,16 @@
     padding: 0.5rem 0;
   }
 
-  &__link {
+  &__link:link,
+  &__link:visited {
     text-decoration: none;
     color: $color-grey;
     font-size: 1.3rem;
+  }
+
+  &__link:hover,
+  &__link:active {
+    color: $color-green;
   }
 
   &__bottom {
@@ -102,11 +115,18 @@
     &--right {
     }
 
-    &-link {
+    &-link:link,
+    &-link:visited {
       text-decoration: none;
       color: $color-grey;
       font-size: 1.4rem;
       margin-left: 3rem;
+      transition: all 0.2s;
+    }
+
+    &-link:hover,
+    &-link:active {
+      color: $color-green;
     }
   }
 }

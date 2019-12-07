@@ -1,0 +1,27 @@
+.numbers {
+  padding: 6rem 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__box {
+    display: flex;
+    flex: 0 0 25%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__heading {
+    font-size: 4rem;
+    font-weight: 700;
+    color: $color-green;
+  }
+
+  &__description {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}

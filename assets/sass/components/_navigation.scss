@@ -1,5 +1,10 @@
 .navigation {
-  background-color: #fff;
+  background-color: #ffffff;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+  border-bottom: 2px solid $color-light-1;
 
   & .container {
     display: flex;
@@ -8,21 +13,64 @@
   }
 
   &__box {
+    margin-left: 15rem;
+    height: 8rem;
+    display: flex;
+    align-items: center;
   }
 
   &__menu {
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
 
   &__item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-right: 3.5rem;
     list-style: none;
-    padding: 3rem 1.5rem;
-    display: inline-block;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s;
   }
 
-  &__link {
+  &__link::after {
+    content: '';
+    display: block;
+    width: 1px;
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    color: $color-green;
+    border-top: 1px solid transparent;
+    transition: all, 0.3s;
+  }
+
+  &__link:link,
+  &__link:visited {
+    position: relative;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto';
+    font-weight: 900;
     text-decoration: none;
     color: $color-dark;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     text-transform: uppercase;
+  }
+
+  &__link:hover,
+  &__link:active {
+    color: $color-green;
+  }
+
+  &__link:hover::after,
+  &__link:active::after {
+    width: 110%;
+    border-top: 1px solid $color-green;
   }
 }

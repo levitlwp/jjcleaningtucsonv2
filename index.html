@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
-      href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,700&display=swap"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto:700, 900|Passion+One&display=swap"
       rel="stylesheet"
     />
     <script
@@ -20,7 +20,7 @@
       <nav class="navigation">
         <div class="container">
           <div class="logo-box">
-            <h1 class="logo">J&J Cleaning Company</h1>
+            <a href="" class="logo"><h1>J&J Cleaning Company</h1></a>
           </div>
           <div class="navigation__box">
             <ul class="navigation__menu">
@@ -34,11 +34,11 @@
                 <a href="#" class="navigation__link">services</a>
               </li>
               <li class="navigation__item">
-                <a href="#" class="navigation__link">contact</a>
+                <a href="contact.html" class="navigation__link">contact</a>
               </li>
             </ul>
           </div>
-          <button class="btn btn-schedule">schedule cleaning</button>
+          <button class="btn btn--schedule">schedule cleaning</button>
         </div>
       </nav>
       <div class="header__text-box">
@@ -48,67 +48,76 @@
         </h1>
         <div class="header__buttons">
           <a href="" class="btn btn--read">read more</a>
-          <a href="" class="btn btn--call">call us</a>
+          <a href="tel:5203087098" class="btn btn--call">call us</a>
         </div>
       </div>
       <i class="header__icon header__icon--left fas fa-chevron-left"></i>
       <i class="header__icon header__icon--right fas fa-chevron-right"></i>
-    </header>
-    <section class="introduction container">
-      <ul class="introduction__menu u-margin-bottom-medium">
-        <li class="introduction__item introduction__item--active">
-          <a href="#" class="introduction__link introduction__link--active"
+
+      <ul class="headernav">
+        <li class="headernav__item headernav__item--active">
+          <a href="#" class="headernav__link headernav__link--active"
             >residential</a
           >
         </li>
-        <li class="introduction__item">
-          <a href="#" class="introduction__link">business</a>
+        <li class="headernav__item">
+          <a href="#" class="headernav__link">business</a>
         </li>
-        <li class="introduction__item">
-          <a href="#" class="introduction__link">exterior</a>
+        <li class="headernav__item">
+          <a href="#" class="headernav__link">exterior</a>
         </li>
-        <li class="introduction__item">
-          <a href="#" class="introduction__link">green</a>
+        <li class="headernav__item">
+          <a href="#" class="headernav__link">green</a>
         </li>
       </ul>
-      <div class="introduction__details">
-        <div class="container">
+    </header>
+
+    <section class="introduction" id="intro">
+      <div class="container">
+        <div class="introduction__details">
           <div class="introduction__details--left">
-            <div class="introduction__detail-top u-margin-bottom-small">
-              <h4 class="introduction__detail-heading">furniture treatment</h4>
-              <i class="introduction__icon fas fa-plus"></i>
-              <!-- <i class="fas fa-minus"></i> -->
+            <div class="introduction__detail">
+              <div class="introduction__detail-top u-margin-bottom-small">
+                <h4 class="introduction__detail-heading">
+                  furniture treatment
+                </h4>
+                <i class="introduction__icon fas fa-plus"></i>
+              </div>
+              <div
+                class="introduction__detail-bottom introduction__detail-bottom--toggle u-margin-bottom-small"
+              >
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi,
+                enim rerum? Voluptatum deserunt expedita iusto placeat magnam
+                iure error quo?
+              </div>
             </div>
-            <div
-              class="introduction__detail-bottom introduction__detail-bottom--toggle u-margin-bottom-small"
-            >
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi,
-              enim rerum? Voluptatum deserunt expedita iusto placeat magnam iure
-              error quo?
+            <div class="introduction__detail">
+              <div class="introduction__detail-top u-margin-bottom-small">
+                <h4 class="introduction__detail-heading">
+                  packing and unpacking
+                </h4>
+                <i class="introduction__icon fas fa-plus"></i>
+              </div>
+              <div
+                class="introduction__detail-bottom introduction__detail-bottom--toggle u-margin-bottom-small"
+              >
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi,
+                enim rerum? Voluptatum deserunt expedita iusto placeat magnam
+                iure error quo?
+              </div>
             </div>
-            <div class="introduction__detail-top u-margin-bottom-small">
-              <h4 class="introduction__detail-heading">
-                packing and unpacking
-              </h4>
-              <i class="introduction__icon fas fa-plus"></i>
-            </div>
-            <div
-              class="introduction__detail-bottom introduction__detail-bottom--toggle u-margin-bottom-small"
-            >
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi,
-              enim rerum? Voluptatum deserunt expedita iusto placeat magnam iure
-              error quo?
-            </div>
-            <div class="introduction__detail-top u-margin-bottom-small">
-              <h4 class="introduction__detail-heading">window washing</h4>
-              <i class="introduction__icon fas fa-plus"></i>
-            </div>
-            <div
-              class="introduction__detail-bottom introduction__detail-bottom--toggle u-margin-bottom-small"
-            >
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi,
-              enim rerum? Voluptatum deserunt expedita iusto placeat magnam iure
-              error quo?
+            <div class="introduction__detail">
+              <div class="introduction__detail-top u-margin-bottom-small">
+                <h4 class="introduction__detail-heading">window washing</h4>
+                <i class="introduction__icon fas fa-plus"></i>
+              </div>
+              <div
+                class="introduction__detail-bottom introduction__detail-bottom--toggle u-margin-bottom-small"
+              >
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi,
+                enim rerum? Voluptatum deserunt expedita iusto placeat magnam
+                iure error quo?
+              </div>
             </div>
           </div>
           <div class="introduction__details--right">
@@ -120,7 +129,7 @@
               libero sed quod sequi possimus consectetur ullam omnis a vel
               doloremque.
             </p>
-            <div class="btn btn--intro">read more</div>
+            <div class="btn btn--intro u-margin-bottom-large">read more</div>
           </div>
         </div>
       </div>
@@ -206,7 +215,7 @@
       </div>
     </section>
 
-    <section class="service">
+    <!-- <section class="service">
       <div class="container">
         <h2 class="heading-secondary">cleaning services</h2>
         <h4 class="service__sub-heading">
@@ -245,7 +254,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
     <section class="clients">
       <div class="container">
@@ -272,9 +281,12 @@
           </div>
           <div class="clients__box">
             <p class="clients__paragraph">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt,
-              autem. Eos odit hic vero amet nostrum nam natus exercitationem
-              molestiae, totam necessitatibus a voluptates alias?
+              Jessica and Jacob did an outstanding job during their time
+              cleaning our showroom. Not only were they pleasant to work with
+              they always had a “how can I help, and how can I improve”
+              attitude. Their work was always above standard. Both
+              professionally and personal I would highly recommend J&J cleaning
+              company. You will not find anyone better in Tucson!!!
             </p>
             <div class="clients__stars">
               <i class="clients__star fas fa-star"></i>
@@ -283,12 +295,19 @@
               <i class="clients__star fas fa-star"></i>
               <i class="clients__star fas fa-star"></i>
             </div>
+            <div class="clients__info">
+              <div class="clients__name">Steve</div>
+              <div class="clients__area">oro vally</div>
+            </div>
           </div>
           <div class="clients__box">
             <p class="clients__paragraph">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt,
-              autem. Eos odit hic vero amet nostrum nam natus exercitationem
-              molestiae, totam necessitatibus a voluptates alias?
+              Jessica and Jacob did an outstanding job during their time
+              cleaning our showroom. Not only were they pleasant to work with
+              they always had a “how can I help, and how can I improve”
+              attitude. Their work was always above standard. Both
+              professionally and personal I would highly recommend J&J cleaning
+              company. You will not find anyone better in Tucson!!!
             </p>
             <div class="clients__stars">
               <i class="clients__star fas fa-star"></i>
@@ -326,9 +345,9 @@
               <div class="footer__heading">
                 phone
               </div>
-              <div class="footer__top-content">
-                (520)308-9078
-              </div>
+              <a href="tel:5203089078" class="footer__top-content"
+                >(520)308-9078</a
+              >
             </div>
           </div>
           <div class="footer__top-box">
@@ -339,9 +358,11 @@
               <div class="footer__heading">
                 email
               </div>
-              <div class="footer__top-content">
-                bowenyang0.0@gmail.com
-              </div>
+              <a
+                href="mailto:bowenyang0.0@gmail.com"
+                class="footer__top-content"
+                >bowenyang0.0@gmail.com</a
+              >
             </div>
           </div>
         </div>

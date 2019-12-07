@@ -9,6 +9,7 @@
   "author": "Bowen Yang",
   "license": "MIT",
   "devDependencies": {
+    "jquery": "^3.4.1",
     "node-sass": "^4.13.0"
   }
 }
