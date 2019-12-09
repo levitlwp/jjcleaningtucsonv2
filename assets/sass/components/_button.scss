@@ -6,6 +6,7 @@
   padding: 1.5rem 3rem;
   font-size: 1.6rem;
   font-weight: 700;
+  text-align: center;
 
   &--read:link,
   &--read:visited {
@@ -40,6 +41,8 @@
   }
 
   &--schedule {
+    font-size: 1.4rem;
+    letter-spacing: 0;
     background-color: #fff;
     border: 2px solid $color-dark;
     transition: all 0.2s;

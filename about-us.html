@@ -19,7 +19,7 @@
     <nav class="navigation">
       <div class="container">
         <div class="logo-box">
-          <h1 class="logo">J&J Cleaning Company</h1>
+          <a href="index.html" class="logo"><h1>J&J Cleaning Company</h1></a>
         </div>
         <div class="navigation__box">
           <ul class="navigation__menu">
@@ -41,14 +41,14 @@
       </div>
     </nav>
 
-    <header class="header--small">
-      <div class="header--small__text-box">
-        <div class="header--small__text-box--top">
-          <a href="index.html" class="header--small__home">Home</a>
+    <header class="header--about">
+      <div class="header--about__text-box">
+        <div class="header--about__text-box--top">
+          <a href="index.html" class="header--about__home">Home</a>
           <i class="fas fa-chevron-right"></i>
           <span>About us</span>
         </div>
-        <div class="header--small__text-box--bottom">
+        <div class="header--about__text-box--bottom">
           <h2>about us</h2>
         </div>
       </div>
@@ -72,10 +72,11 @@
             ><i class="about__icon fas fa-check-circle"></i>Lorem, ipsum dolor
             sit amet consectetur adipisicing elit. Officia, perferendis.</span
           >
-          <span class="about__detail"
+          <span class="about__detail u-margin-bottom-medium"
             ><i class="about__icon fas fa-check-circle"></i>Lorem, ipsum dolor
             sit amet consectetur adipisicing elit. Officia, perferendis.</span
           >
+          <a href="tel:5203087098" class="btn btn--read">call us</a>
         </div>
         <div class="about--right">
           <img src="assets/img/us.png" alt="" class="about__photo" />
@@ -213,6 +214,22 @@
         </div>
       </div>
     </footer>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-154233046-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-154233046-1');
+    </script>
+
     <script src="assets/js/index.js"></script>
   </body>
 </html>

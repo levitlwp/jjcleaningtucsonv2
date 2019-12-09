@@ -130,7 +130,7 @@ headerNavItems.forEach((el, index) => {
 });
 
 introIcsonsArr.forEach((el, index) => {
-  el.addEventListener('click', e => {
+  el.closest('.introduction__detail-top').addEventListener('click', e => {
     el.classList.toggle('fa-plus');
     el.classList.toggle('fa-minus');
     introDetailBottomArr[index].classList.toggle(

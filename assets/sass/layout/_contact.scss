@@ -1,14 +1,41 @@
 .contact {
+  padding: 4rem 0;
+
   .container {
     display: flex;
   }
 
+  &__left {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__detail {
     font-size: 1.6rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+
+    a:link,
+    a:visited {
+      text-decoration: none;
+      color: $color-dark;
+    }
+
+    a:hover,
+    a:active {
+      color: $color-green;
+    }
   }
 
   &__icon {
     font-size: 2rem;
     color: $color-green;
+    margin-right: 1.3rem;
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
   }
 }

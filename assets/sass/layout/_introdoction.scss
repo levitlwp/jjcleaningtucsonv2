@@ -57,6 +57,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    cursor: pointer;
   }
 
   &__detail-heading {
@@ -71,7 +72,6 @@
 
   &__icon {
     font-size: 1.6rem;
-    cursor: pointer;
   }
 
   &__detail-bottom {
