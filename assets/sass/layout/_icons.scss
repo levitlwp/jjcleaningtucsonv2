@@ -8,6 +8,8 @@
 
   &__box {
     flex: 0 0 32%;
+    animation: moveInbottom 0.5s ease-out;
+    transition: all 0.2s;
   }
 
   &__header {

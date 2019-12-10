@@ -1,3 +1,22 @@
+// Smooth Scrolling
+$('.btn--read').on('click', function(event) {
+  if (this.hash !== '') {
+    event.preventDefault();
+
+    const hash = this.hash;
+
+    $('html, body').animate(
+      {
+        scrollTop: $(hash).offset().top
+      },
+      800,
+      function() {
+        window.location.hash = hash;
+      }
+    );
+  }
+});
+
 const headerNavItems = document.querySelectorAll('.headernav__item');
 const headerNavItemsArr = Array.from(headerNavItems);
 
@@ -133,9 +152,7 @@ introIcsonsArr.forEach((el, index) => {
   el.closest('.introduction__detail-top').addEventListener('click', e => {
     el.classList.toggle('fa-plus');
     el.classList.toggle('fa-minus');
-    introDetailBottomArr[index].classList.toggle(
-      'introduction__detail-bottom--toggle'
-    );
+    $(introDetailBottom[index]).slideToggle(300);
   });
 });
 
@@ -151,8 +168,26 @@ headerIconsArr.forEach((el, index) => {
   });
 });
 
+/**
+ * Services page question animation
+ */
+const servicesQuestions = $('.services__question');
+const servicesQuestionsArr = Array.from(servicesQuestions);
+
+const servicesAnswers = $('.services__question--bottom');
+const servicesAnswersArr = Array.from(servicesAnswers);
+
+servicesQuestionsArr.forEach((el, index) => {
+  el.addEventListener('click', e => {
+    $(servicesAnswersArr[index]).slideToggle(300);
+  });
+});
+
+/**
+ *  About-us CountUp number animation
+ */
 $('.counter').each(function() {
-  const $this = $(this),
+  var $this = $(this),
     countTo = $this.attr('data-count');
 
   $({ countNum: $this.text() }).animate(
@@ -161,7 +196,7 @@ $('.counter').each(function() {
     },
 
     {
-      duration: 8000,
+      duration: 2000,
       easing: 'linear',
       step: function() {
         $this.text(Math.floor(this.countNum));

@@ -12,11 +12,14 @@
   input[type='email'] {
     width: 80%;
     padding: 1rem 0.5rem;
+    font-size: 1.6rem;
   }
 
   select {
     width: 80%;
     height: 3rem;
+    background-color: #fff;
+    font-size: 1.6rem;
   }
 
   textarea {
@@ -27,7 +30,7 @@
 
   input[type='submit'] {
     width: 10rem;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 1px;

@@ -20,7 +20,31 @@
   font-weight: 700;
 }
 
+.heading-3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
 .paragraph {
   font-size: 1.4rem;
   color: $color-grey;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+label,
+input,
+div {
+  &::selection {
+    background-color: $color-green;
+    color: #fff;
+  }
 }

@@ -3,6 +3,7 @@
 @import 'base/base';
 @import 'base/utilities';
 @import 'base/typography';
+@import 'base/animations';
 
 @import 'components/navigation';
 @import 'components/button';
@@ -10,6 +11,7 @@
 @import 'components/headernav';
 @import 'components/numbers';
 @import 'components/form';
+@import 'components/contactbox';
 
 @import 'layout/header';
 @import 'layout/introdoction';
@@ -18,3 +20,4 @@
 @import 'layout/footer';
 @import 'layout/about';
 @import 'layout/contact';
+@import 'layout/services';
