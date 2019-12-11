@@ -9,6 +9,18 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%;
+
+  // @include respond(1200px) {
+  //   font-size: 56.25%;
+  // }
+
+  // @include respond(900px) {
+  //   font-size: 56.25%;
+  // }
+
+  // @include respond(1800px) {
+  //   font-size: 75%;
+  // }
 }
 
 body {

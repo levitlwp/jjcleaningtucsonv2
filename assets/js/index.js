@@ -1,21 +1,70 @@
-// Smooth Scrolling
-$('.btn--read').on('click', function(event) {
-  if (this.hash !== '') {
-    event.preventDefault();
+$(document).ready(function() {
+  $('.owl-carousel').owlCarousel();
+});
 
-    const hash = this.hash;
-
-    $('html, body').animate(
-      {
-        scrollTop: $(hash).offset().top
-      },
-      800,
-      function() {
-        window.location.hash = hash;
-      }
-    );
+$('.owl-carousel--1').owlCarousel({
+  loop: true,
+  margin: 0,
+  nav: false,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 1
+    },
+    1000: {
+      items: 1
+    }
   }
 });
+
+$('.owl-carousel--2').owlCarousel({
+  loop: true,
+  margin: 10,
+  nav: false,
+  responsive: {
+    0: {
+      items: 1
+    },
+    600: {
+      items: 2
+    },
+    1000: {
+      items: 3
+    }
+  }
+});
+
+const owl = $('.owl-carousel--1');
+owl.owlCarousel();
+// Go to the next item
+$('.header__icon--left').click(function() {
+  owl.trigger('next.owl.carousel');
+});
+// Go to the previous item
+$('.header__icon--left').click(function() {
+  owl.trigger('prev.owl.carousel', [300]);
+});
+
+// Smooth Scrolling
+// $('.btn--read').on('click', function(event) {
+//   if (this.hash !== '') {
+//     event.preventDefault();
+
+//     const hash = this.hash;
+
+//     $('html, body').animate(
+//       {
+//         scrollTop: $(hash).offset().top
+//       },
+//       800,
+//       function() {
+//         window.location.hash = hash;
+//       }
+//     );
+//   }
+// });
 
 const headerNavItems = document.querySelectorAll('.headernav__item');
 const headerNavItemsArr = Array.from(headerNavItems);
@@ -156,18 +205,6 @@ introIcsonsArr.forEach((el, index) => {
   });
 });
 
-const headerIcons = document.querySelectorAll('.header__icon');
-const headerIconsArr = Array.from(headerIcons);
-const header = document.querySelector('.header');
-
-headerIconsArr.forEach((el, index) => {
-  el.addEventListener('click', e => {
-    if (index === 0) {
-      header.style.backgroundImage = "url('/assets/img/hero2.jpg')";
-    }
-  });
-});
-
 /**
  * Services page question animation
  */
@@ -203,7 +240,6 @@ $('.counter').each(function() {
       },
       complete: function() {
         $this.text(this.countNum);
-        //alert('finished');
       }
     }
   );

@@ -76,19 +76,11 @@ div::selection {
   background-color: #1d7071;
   color: #fff; }
 
-@keyframes moveInBottom {
-  0% {
-    transform: translateY(3rem);
-    opacity: 0; }
-  100% {
-    transform: translateY(0);
-    opacity: 1; } }
-
 .navigation {
   background-color: #ffffff;
   top: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 500;
   position: fixed;
   border-bottom: 2px solid #f7f7f7; }
   .navigation .container {
@@ -213,10 +205,7 @@ div::selection {
   font-size: 1.8rem; }
 
 .headernav {
-  margin-left: 10%;
-  width: 80%;
-  position: absolute;
-  bottom: 0;
+  width: 100%;
   list-style-type: none;
   display: flex;
   height: 10rem;
@@ -305,10 +294,15 @@ div::selection {
 
 .header {
   position: relative;
-  height: 90vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("/assets/img/hero1.jpg");
   background-position: center;
-  background-size: cover; }
+  background-size: cover;
+  height: 90vh; }
+  .header--1 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/img/hero1.jpg"); }
+  .header--2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/img/hero2.jpg"); }
+  .header--3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/img/hero3.jpg"); }
   .header__text-box {
     position: absolute;
     top: 50%;
@@ -751,3 +745,11 @@ div::selection {
     font-size: 1.6rem;
     font-weight: 700;
     transition: all 0.2s; }
+
+.headernav-wrapper {
+  position: absolute;
+  width: 80%;
+  margin: 0 10%;
+  height: 10rem;
+  top: calc(90vh - 10rem);
+  z-index: 100; }
