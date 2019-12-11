@@ -54,15 +54,24 @@
     border: 2px solid transparent;
   }
 
-  &--intro {
+  &--intro:link,
+  &--intro:visited {
+    color: $color-green;
     width: 12rem;
     text-align: center;
     font-size: 1.4rem;
-    padding: 1rem;
+    padding: 1.5rem 3.5rem;
     font-weight: 700;
     background-color: transparent;
-    border: 2px solid $color-dark;
+    border: 2px solid $color-green;
     margin-top: 4rem;
+    transition: all 0.4s;
+  }
+
+  &--intro:hover,
+  &--intro:active {
+    background-color: $color-green;
+    color: #fff;
   }
 
   &--contact:link,

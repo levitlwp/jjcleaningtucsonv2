@@ -78,6 +78,7 @@
   border: none;
   padding: 0 !important;
   font: inherit;
+  transition: all 0.3s ease;
 }
 .owl-carousel.owl-loading {
   opacity: 0;

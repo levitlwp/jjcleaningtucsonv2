@@ -1,3 +1,6 @@
+/**
+ * HEADER CAROUSEL
+ */
 $(document).ready(function() {
   $('.owl-carousel').owlCarousel();
 });
@@ -6,6 +9,9 @@ $('.owl-carousel--1').owlCarousel({
   loop: true,
   margin: 0,
   nav: false,
+  autoplay: true,
+  dots: false,
+  autoplayTimeout: 6000,
   responsive: {
     0: {
       items: 1
@@ -21,8 +27,9 @@ $('.owl-carousel--1').owlCarousel({
 
 $('.owl-carousel--2').owlCarousel({
   loop: true,
-  margin: 10,
+  margin: 40,
   nav: false,
+  dots: false,
   responsive: {
     0: {
       items: 1
@@ -206,7 +213,7 @@ introIcsonsArr.forEach((el, index) => {
 });
 
 /**
- * Services page question animation
+ * SERVICES PAGES QUESTION
  */
 const servicesQuestions = $('.services__question');
 const servicesQuestionsArr = Array.from(servicesQuestions);
