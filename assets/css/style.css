@@ -11,15 +11,27 @@ COLOR
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   line-height: 1.7; }
 
 .container {
   width: 80%;
   margin: 0 auto; }
+  @media only screen and (max-width: 64em) {
+    .container {
+      width: 85%; } }
+  @media only screen and (max-width: 56.25em) {
+    .container {
+      width: 90%; } }
 
 .u-margin-bottom-small {
   margin-bottom: 2rem; }
@@ -29,20 +41,26 @@ body {
 
 .u-margin-bottom-large {
   margin-bottom: 6rem; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-large {
+      margin-bottom: 5rem; } }
 
 .u-margin-bottom-huge {
   margin-bottom: 8rem; }
 
-.logo {
+.logo-text {
   text-decoration: none;
   color: #2f2f2f;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 900;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   text-transform: uppercase; }
+  @media only screen and (max-width: 75em) {
+    .logo-text {
+      font-size: 1.8rem; } }
 
 .heading-primary {
-  font-size: 5rem;
+  font-size: 3.8rem;
   font-weight: 700;
   color: #fff;
   letter-spacing: 1px; }
@@ -88,10 +106,13 @@ div::selection {
     justify-content: space-between;
     align-items: center; }
   .navigation__box {
-    margin-left: 25rem;
+    margin-left: auto;
     height: 8rem;
     display: flex;
     align-items: center; }
+    @media only screen and (max-width: 56.25em) {
+      .navigation__box {
+        height: 6.5rem; } }
   .navigation__menu {
     height: 100%;
     display: flex;
@@ -99,14 +120,17 @@ div::selection {
   .navigation__item {
     display: flex;
     align-items: center;
+    margin-right: 2.5rem;
     height: 100%;
-    margin-right: 3.5rem;
     list-style: none;
     cursor: pointer;
     border-bottom: 1px solid transparent;
     transition: all 0.3s; }
+    @media only screen and (max-width: 56.25em) {
+      .navigation__item {
+        margin-right: 1.5rem; } }
   .navigation__link::after {
-    content: '';
+    content: "";
     display: block;
     width: 1px;
     position: absolute;
@@ -121,7 +145,7 @@ div::selection {
     text-align: center;
     display: flex;
     align-items: center;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 900;
     text-decoration: none;
     color: #2f2f2f;
@@ -136,7 +160,7 @@ div::selection {
 .btn {
   text-decoration: none;
   text-transform: uppercase;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   padding: 1.5rem 3rem;
   font-size: 1.6rem;
   font-weight: 700;
@@ -163,11 +187,18 @@ div::selection {
     border: 2px solid #fff; }
   .btn--schedule {
     font-size: 1.4rem;
-    letter-spacing: 0;
+    letter-spacing: 1px;
     background-color: #fff;
     border: 2px solid #2f2f2f;
     transition: all 0.4s;
-    cursor: pointer; }
+    cursor: pointer;
+    padding: 1rem 2rem; }
+    @media only screen and (max-width: 75em) {
+      .btn--schedule {
+        padding: 1rem 1.5rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .btn--schedule {
+        padding: 1rem; } }
   .btn--schedule:hover {
     color: #fff;
     background-color: #1d7071;
@@ -216,6 +247,12 @@ div::selection {
   height: 10rem;
   background-color: #fff;
   align-items: center; }
+  @media only screen and (max-width: 75em) {
+    .headernav {
+      height: 9rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .headernav {
+      height: 7.5rem; } }
   .headernav__item {
     flex: 0 0 25%;
     height: 100%;
@@ -235,7 +272,7 @@ div::selection {
   .headernav__link {
     text-decoration: none;
     color: #2f2f2f;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px; }
@@ -401,27 +438,6 @@ div::selection {
   .introduction__details {
     display: flex;
     justify-content: space-between; }
-  .introduction__item {
-    flex: 0 0 25%;
-    list-style: none;
-    display: block;
-    text-align: center;
-    padding: 3.5rem 0;
-    background-color: #fff;
-    transition: all 0.2s; }
-    .introduction__item:not(:last-of-type) {
-      border-right: 1px solid #f7f7f7; }
-    .introduction__item--active {
-      background-color: #1d7071; }
-  .introduction__link {
-    text-decoration: none;
-    color: #2f2f2f;
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 1px; }
-    .introduction__link--active {
-      color: #fff; }
   .introduction__details--left {
     flex: 0 0 60%; }
   .introduction__details--right {
@@ -451,6 +467,9 @@ div::selection {
 .icons {
   padding: 10rem 0;
   background-color: #f7f7f7; }
+  @media only screen and (max-width: 75em) {
+    .icons {
+      padding: 8rem 0; } }
   .icons__row {
     display: flex;
     justify-content: space-between; }
@@ -465,6 +484,9 @@ div::selection {
     font-size: 4rem;
     color: #1d7071;
     margin-right: 2rem; }
+    @media only screen and (max-width: 56.25em) {
+      .icons__icon {
+        font-size: 3.8rem; } }
   .icons__heading {
     font-size: 1.5rem; }
   .icons__detail {
@@ -477,6 +499,9 @@ div::selection {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/assets/img/hero3.jpg");
   background-position: center;
   background-size: cover; }
+  @media only screen and (max-width: 75em) {
+    .clients {
+      padding-bottom: 8rem; } }
   .clients .container {
     display: flex;
     flex-direction: column;
@@ -510,8 +535,8 @@ div::selection {
     text-align: center;
     position: relative; }
     .clients__paragraph::before {
-      content: '\201C';
-      font-family: 'Passion One';
+      content: "\201C";
+      font-family: "Passion One";
       display: block;
       font-size: 15rem;
       position: absolute;
@@ -544,16 +569,23 @@ div::selection {
     padding: 3rem 0;
     display: flex;
     background-color: #1a1a1a;
-    align-items: center; }
+    align-items: center;
+    justify-content: space-between; }
+    @media only screen and (max-width: 56.25em) {
+      .footer__top {
+        padding: 2rem 0; } }
   .footer__top-box {
-    margin-left: 5rem;
+    flex: 0 0 30%;
     display: flex;
     align-items: center;
-    flex: 0 0 30%; }
+    justify-content: center; }
   .footer__icon {
     color: #9e9e9e;
     font-size: 4.5rem;
     margin-right: 2rem; }
+    @media only screen and (max-width: 64em) {
+      .footer__icon {
+        font-size: 3.8rem; } }
   .footer__top-info {
     display: flex;
     flex-direction: column;
@@ -569,7 +601,7 @@ div::selection {
       color: #1d7071; }
     .footer__top-content::after {
       position: absolute;
-      content: '';
+      content: "";
       display: block;
       width: 2px;
       height: 3rem;
@@ -577,15 +609,18 @@ div::selection {
       top: 50%;
       right: 0; }
   .footer__mid {
-    display: flex; }
+    display: flex;
+    justify-content: space-between; }
   .footer__logo {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-transform: uppercase; }
   .footer__mid-box {
-    flex: 0 0 30%;
-    margin-right: 8rem; }
+    flex: 0 0 32%; }
+    .footer__mid-box:first-of-type {
+      flex: 0 0 30%;
+      margin-right: auto; }
   .footer__heading {
     font-size: 1.4rem;
     text-transform: uppercase;
@@ -759,3 +794,15 @@ div::selection {
   height: 10rem;
   top: calc(90vh - 10rem);
   z-index: 100; }
+  @media only screen and (max-width: 75em) {
+    .headernav-wrapper {
+      top: calc(90vh - 9rem); } }
+  @media only screen and (max-width: 64em) {
+    .headernav-wrapper {
+      width: 85%;
+      margin-left: 7.5%; } }
+  @media only screen and (max-width: 56.25em) {
+    .headernav-wrapper {
+      width: 90%;
+      margin-left: 5%;
+      top: calc(90vh - 7.5rem); } }

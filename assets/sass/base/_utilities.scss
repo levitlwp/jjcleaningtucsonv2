@@ -8,6 +8,10 @@
 
 .u-margin-bottom-large {
   margin-bottom: 6rem;
+
+  @include respond(900) {
+    margin-bottom: 5rem;
+  }
 }
 
 .u-margin-bottom-huge {

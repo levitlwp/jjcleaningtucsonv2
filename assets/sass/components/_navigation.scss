@@ -13,10 +13,14 @@
   }
 
   &__box {
-    margin-left: 25rem;
+    margin-left: auto;
     height: 8rem;
     display: flex;
     align-items: center;
+
+    @include respond(900) {
+      height: 6.5rem;
+    }
   }
 
   &__menu {
@@ -28,16 +32,20 @@
   &__item {
     display: flex;
     align-items: center;
+    margin-right: 2.5rem;
     height: 100%;
-    margin-right: 3.5rem;
     list-style: none;
     cursor: pointer;
     border-bottom: 1px solid transparent;
     transition: all 0.3s;
+
+    @include respond(900) {
+      margin-right: 1.5rem;
+    }
   }
 
   &__link::after {
-    content: '';
+    content: "";
     display: block;
     width: 1px;
     position: absolute;
@@ -55,7 +63,7 @@
     text-align: center;
     display: flex;
     align-items: center;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-weight: 900;
     text-decoration: none;
     color: $color-dark;

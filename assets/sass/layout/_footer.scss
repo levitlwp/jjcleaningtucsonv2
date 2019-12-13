@@ -6,19 +6,28 @@
     display: flex;
     background-color: $color-bg-dark-1;
     align-items: center;
+    justify-content: space-between;
+
+    @include respond(900) {
+      padding: 2rem 0;
+    }
   }
 
   &__top-box {
-    margin-left: 5rem;
+    flex: 0 0 30%;
     display: flex;
     align-items: center;
-    flex: 0 0 30%;
+    justify-content: center;
   }
 
   &__icon {
     color: $color-grey;
     font-size: 4.5rem;
     margin-right: 2rem;
+
+    @include respond(1024) {
+      font-size: 3.8rem;
+    }
   }
 
   &__top-info {
@@ -42,7 +51,7 @@
 
     &::after {
       position: absolute;
-      content: '';
+      content: "";
       display: block;
       width: 2px;
       height: 3rem;
@@ -54,18 +63,23 @@
 
   &__mid {
     display: flex;
+    justify-content: space-between;
   }
 
   &__logo {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     color: #fff;
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
   }
 
   &__mid-box {
-    flex: 0 0 30%;
-    margin-right: 8rem;
+    flex: 0 0 32%;
+
+    &:first-of-type {
+      flex: 0 0 30%;
+      margin-right: auto;
+    }
   }
 
   &__heading {
@@ -77,9 +91,6 @@
     &--dark {
       color: $color-dark;
     }
-  }
-
-  &__menu {
   }
 
   &__item {
@@ -111,9 +122,6 @@
     &--left {
       color: $color-grey;
       font-size: 1.4rem;
-    }
-
-    &--right {
     }
 
     &-link:link,

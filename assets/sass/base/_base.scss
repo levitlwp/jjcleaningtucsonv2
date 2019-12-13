@@ -10,21 +10,21 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
 
-  // @include respond(1200px) {
-  //   font-size: 56.25%;
-  // }
+  @include respond(1200px) {
+    font-size: 56.25%;
+  }
 
-  // @include respond(900px) {
-  //   font-size: 56.25%;
-  // }
+  @include respond(900px) {
+    font-size: 50%;
+  }
 
-  // @include respond(1800px) {
-  //   font-size: 75%;
-  // }
+  @include respond(1800px) {
+    font-size: 75%;
+  }
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 400;
   line-height: 1.7;
 }
@@ -32,4 +32,12 @@ body {
 .container {
   width: 80%;
   margin: 0 auto;
+
+  @include respond(1024) {
+    width: 85%;
+  }
+
+  @include respond(900) {
+    width: 90%;
+  }
 }

@@ -5,4 +5,19 @@
   height: 10rem;
   top: calc(90vh - 10rem);
   z-index: 100;
+
+  @include respond(1200) {
+    top: calc(90vh - 9rem);
+  }
+
+  @include respond(1024) {
+    width: 85%;
+    margin-left: 7.5%;
+  }
+
+  @include respond(900) {
+    width: 90%;
+    margin-left: 5%;
+    top: calc(90vh - 7.5rem);
+  }
 }

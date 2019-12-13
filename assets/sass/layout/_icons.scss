@@ -1,6 +1,11 @@
 .icons {
   padding: 10rem 0;
   background-color: $color-light-1;
+
+  @include respond(1200) {
+    padding: 8rem 0;
+  }
+
   &__row {
     display: flex;
     justify-content: space-between;
@@ -21,6 +26,10 @@
     font-size: 4rem;
     color: $color-green;
     margin-right: 2rem;
+
+    @include respond(900) {
+      font-size: 3.8rem;
+    }
   }
 
   &__heading {

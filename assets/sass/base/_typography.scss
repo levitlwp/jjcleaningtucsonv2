@@ -1,14 +1,18 @@
-.logo {
+.logo-text {
   text-decoration: none;
   color: $color-dark;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 900;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   text-transform: uppercase;
+
+  @include respond(1200) {
+    font-size: 1.8rem;
+  }
 }
 
 .heading-primary {
-  font-size: 5rem;
+  font-size: 3.8rem;
   font-weight: 700;
   color: #fff;
   letter-spacing: 1px;

@@ -6,6 +6,14 @@
   background-color: #fff;
   align-items: center;
 
+  @include respond(1200) {
+    height: 9rem;
+  }
+
+  @include respond(900) {
+    height: 7.5rem;
+  }
+
   &__item {
     flex: 0 0 25%;
     height: 100%;
@@ -33,7 +41,7 @@
   &__link {
     text-decoration: none;
     color: $color-dark;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     text-transform: uppercase;
     font-weight: 700;
     letter-spacing: 1px;

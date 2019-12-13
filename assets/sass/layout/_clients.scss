@@ -1,9 +1,13 @@
 .clients {
   padding: 5rem 0 10rem 0;
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url('/assets/img/hero3.jpg');
+    url("/assets/img/hero3.jpg");
   background-position: center;
   background-size: cover;
+
+  @include respond(1200) {
+    padding-bottom: 8rem;
+  }
 
   .container {
     display: flex;
@@ -49,8 +53,8 @@
     position: relative;
 
     &::before {
-      content: '\201C';
-      font-family: 'Passion One';
+      content: "\201C";
+      font-family: "Passion One";
       display: block;
       font-size: 15rem;
       position: absolute;
