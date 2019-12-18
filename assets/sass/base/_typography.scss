@@ -1,9 +1,9 @@
 .logo-text {
   text-decoration: none;
-  color: $color-dark;
+  color: #fff;
   font-size: 2rem;
   font-weight: 900;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   text-transform: uppercase;
 
   @include respond(1200) {

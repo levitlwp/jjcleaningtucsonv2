@@ -51,7 +51,7 @@
 
     &::after {
       position: absolute;
-      content: "";
+      content: '';
       display: block;
       width: 2px;
       height: 3rem;
@@ -67,7 +67,7 @@
   }
 
   &__logo {
-    font-family: "Roboto";
+    font-family: 'Roboto';
     color: #fff;
     font-size: 1.8rem;
     text-transform: uppercase;
@@ -116,7 +116,7 @@
 
     .container {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
     }
 
     &--left {

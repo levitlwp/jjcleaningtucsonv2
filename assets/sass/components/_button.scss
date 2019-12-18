@@ -1,7 +1,7 @@
 .btn {
   text-decoration: none;
   text-transform: uppercase;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   padding: 1.5rem 3rem;
   font-size: 1.6rem;
   font-weight: 700;
@@ -42,11 +42,12 @@
   &--schedule {
     font-size: 1.4rem;
     letter-spacing: 1px;
-    background-color: #fff;
-    border: 2px solid $color-dark;
+    background-color: transparent;
+    border: 2px solid #fff;
     transition: all 0.4s;
     cursor: pointer;
     padding: 1rem 2rem;
+    color: #fff;
 
     @include respond(1200) {
       padding: 1rem 1.5rem;
@@ -58,9 +59,8 @@
   }
 
   &--schedule:hover {
-    color: #fff;
-    background-color: $color-green;
-    border: 2px solid transparent;
+    transform: scale(1.1) translateY(-3px);
+    box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
   }
 
   &--intro:link,

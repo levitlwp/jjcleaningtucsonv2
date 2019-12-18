@@ -1,24 +1,36 @@
 .about {
+  padding-top: 30rem;
+  padding-bottom: 5rem;
   .container {
     display: flex;
   }
-  background-color: $color-light-1;
 
-  &--left {
-    flex: 0 0 50%;
-    margin-top: 5rem;
+  &__details {
+    background-color: $color-light-1;
+    position: relative;
+    padding: 2rem 8rem 6rem 8rem;
     display: flex;
     flex-direction: column;
-  }
 
-  &--right {
-    flex: 0 0 50%;
-    margin-left: -10rem;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: -20;
+      width: 30rem;
+      height: 30rem;
+      left: 40%;
+      top: -29rem;
+      background-image: url('/assets/img/jacob&jessica.png');
+      background-position: 100% 0;
+      background-size: cover;
+    }
   }
 
   &__photo {
     width: 100%;
     display: block;
+    transform: rotateZ(8deg) translateY(-8rem);
   }
 
   &__heading {

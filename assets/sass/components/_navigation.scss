@@ -1,10 +1,18 @@
 .navigation {
-  background-color: #ffffff;
+  background-color: $color-green;
   top: 0;
   width: 100%;
   z-index: 500;
   position: fixed;
-  border-bottom: 2px solid $color-light-1;
+  padding: 0.8rem 0;
+  box-shadow: none;
+  transition: all 0.2s;
+
+  &--collapse {
+    padding: 0;
+    background-color: $color-green;
+    box-shadow: 0 0.0625rem 0.375rem 0 rgba(0, 0, 0, 0.1);
+  }
 
   & .container {
     display: flex;
@@ -45,13 +53,13 @@
   }
 
   &__link::after {
-    content: "";
+    content: '';
     display: block;
     width: 1px;
     position: absolute;
     top: 6rem;
     left: 0;
-    color: $color-green;
+    color: #fff;
     border-top: 1px solid transparent;
     transition: all, 0.3s;
   }
@@ -63,22 +71,17 @@
     text-align: center;
     display: flex;
     align-items: center;
-    font-family: "Roboto";
+    font-family: 'Roboto';
     font-weight: 900;
     text-decoration: none;
-    color: $color-dark;
+    color: #fff;
     font-size: 1.4rem;
     text-transform: uppercase;
-  }
-
-  &__link:hover,
-  &__link:active {
-    color: $color-green;
   }
 
   &__link:hover::after,
   &__link:active::after {
     width: 110%;
-    border-top: 1px solid $color-green;
+    border-top: 1px solid #fff;
   }
 }
