@@ -39,6 +39,10 @@ $('.owl-carousel--2').owlCarousel({
   loop: true,
   margin: 40,
   nav: true,
+  navText: [
+    "<div class='nav-btn prev-slide'></div>",
+    "<div class='nav-btn next-slide'></div>"
+  ],
   dots: false,
   responsive: {
     0: {
@@ -237,9 +241,47 @@ introIcsonsArr.forEach((el, index) => {
   });
 });
 
-/**
- * SERVICES PAGES QUESTION
- */
+/* Home page icons animation */
+let i = 0;
+
+$(window).scroll(function() {
+  if ($('.icons').length) {
+    const iTop = $('.icons').offset().top - window.innerHeight;
+
+    if (i === 0 && $(window).scrollTop() > iTop) {
+      $('.icons__box').animate(
+        {
+          opacity: 1
+        },
+        800
+      );
+      $('.icons__box').css({ transform: 'translateY(0)' });
+      i = 1;
+    }
+  }
+});
+
+/* Home page client animation */
+let c = 0;
+
+$(window).scroll(function() {
+  if ($('.clients').length) {
+    const cTop = $('.clients').offset().top - window.innerHeight;
+
+    if (c === 0 && $(window).scrollTop() > cTop) {
+      $('.clients__box').animate(
+        {
+          opacity: 1
+        },
+        800
+      );
+
+      $('.clients__box').css({ transform: 'scale(1)' });
+      c = 1;
+    }
+  }
+});
+/* SERVICES PAGES QUESTION */
 const servicesQuestions = $('.services__question');
 const servicesQuestionsArr = Array.from(servicesQuestions);
 
@@ -252,9 +294,7 @@ servicesQuestionsArr.forEach((el, index) => {
   });
 });
 
-/**
- *  About-us CountUp number animation
- */
+/* About-us CountUp number animation */
 let a = 0;
 $(window).scroll(function() {
   if ($('.numbers').length) {

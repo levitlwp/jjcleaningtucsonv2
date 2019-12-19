@@ -13,8 +13,9 @@
 
   &__box {
     flex: 0 0 32%;
-    animation: moveInbottom 0.5s ease-out;
-    transition: all 0.2s;
+    opacity: 0;
+    transform: translateY(15rem);
+    transition: all 1.2s;
   }
 
   &__header {
